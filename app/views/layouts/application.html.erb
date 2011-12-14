@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brew Hub</title>
+  <%= stylesheet_link_tag "scaffold" %>
+  <%= stylesheet_link_tag "depot", :media => "all" %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body id="banner">
+  <div id="banner">
+	<%= @page_title || "Brew Hub" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+	  <p>
+	    Today is <%= Time.now %>
+	  </p>
+	  <a href="http://www....">Home - COMING SOON...</a><br />
+	  <a href="http://www..../faq">Questions - COMING SOON...</a><br />
+	  <a href="http://www..../news">News - COMING SOON...</a><br />
+	  <a href="http://www..../contact">Contact - COMING SOON...</a><br />
+	</div>
+	<div id="main">
+	  <%= yield %>
+	</div>
+  </div>
+</body>
+</html>
